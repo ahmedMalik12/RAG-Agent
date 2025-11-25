@@ -1,16 +1,28 @@
-# Vercel AI SDK RAG Guide Starter Project
+# RAG-Agent: AI-Powered Knowledge Chatbot
 
-This is the starter project for the Vercel AI SDK [Retrieval-Augmented Generation (RAG) guide](https://sdk.vercel.ai/docs/guides/rag-chatbot).
+RAG-Agent is an AI-driven chatbot designed to provide precise responses based on a curated knowledge base. This project demonstrates expertise in building retrieval-augmented generation (RAG) systems, integrating vector search, and delivering a seamless user experience. Contributions include developing the chatbot’s storage and retrieval mechanisms, implementing PDF export functionality, and designing a modern, responsive interface.
 
-In this project, you will build a chatbot that will only respond with information that it has within its knowledge base. The chatbot will be able to both store and retrieve information. This project has many interesting use cases from customer support through to building your own second brain!
+## Key Features
 
-This project will use the following stack:
+- AI-powered chatbot with knowledge base retrieval
+- Efficient vector search for relevant information
+- PDF download of chat history
+- Modern UI built with shadcn-ui and TailwindCSS
+
+## Tech Stack
 
 - [Next.js](https://nextjs.org) 14 (App Router)
 - [Vercel AI SDK](https://sdk.vercel.ai/docs)
 - [OpenAI](https://openai.com)
 - [Drizzle ORM](https://orm.drizzle.team)
-- [Postgres](https://www.postgresql.org/) with [ pgvector ](https://github.com/pgvector/pgvector)
-- [shadcn-ui](https://ui.shadcn.com) and [TailwindCSS](https://tailwindcss.com) for styling
-# RAG-Agent
-# RAG-Agent
+- [Postgres](https://www.postgresql.org/) with [pgvector](https://github.com/pgvector/pgvector)
+- [shadcn-ui](https://ui.shadcn.com) and [TailwindCSS](https://tailwindcss.com)
+
+## Credits
+
+This project is based on the Vercel AI SDK RAG guide starter template. Special thanks to the Vercel and OpenAI teams for their tools and documentation.
+
+---
+
+Connect with me:  
+[LinkedIn](https://www.linkedin.com/in/ahmedmalik-am/)

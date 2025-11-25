@@ -8,7 +8,7 @@ export default function Chat() {
   const [input, setInput] = useState('');
   const { messages, sendMessage } = useChat();
 
-
+// Generates a PDF of the current chat conversation
   const downloadPDF = () => {
     const doc = new jsPDF();
     let yPos = 10;
@@ -44,8 +44,11 @@ export default function Chat() {
         yPos = 10;
       }
     });
-
-    doc.save('chat-conversation.pdf');
+    // Adds Current Date To Chat Filename with format chat-YYYY-MM-DD_HH-MM.pdf (24 hour format)
+    const now = new Date();
+    const pad = (n: number) => n.toString().padStart(2, '0');
+    const formattedDate = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}_${pad(now.getHours())}-${pad(now.getMinutes())}`;
+    doc.save(`chat-${formattedDate}.pdf`);
   };
 
   return (
@@ -76,13 +79,16 @@ export default function Chat() {
           </div>
         ))}
       </div>
-
+{/*Only shows the Download PDF button when there are messages more than 0 
+*/}
+{messages.length > 0 && (
             <button
         onClick={downloadPDF}
         className="mb-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
       >
         Download PDF
       </button>
+)}
 
       <form
         onSubmit={e => {
